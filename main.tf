@@ -62,6 +62,7 @@ resource "google_cloud_run_service" "default" {
     }
 
     metadata {
+      name   = "${var.name}-${var.revision}"
       labels = var.labels
       annotations = merge(
         {
